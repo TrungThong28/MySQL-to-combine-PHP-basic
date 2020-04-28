@@ -16,7 +16,7 @@
 	$url = 'index.php?';
 
 	$limit = 3;
-	$offset = ($page - 1) * $limit;
+	$offset = (count($page) - 1) * $limit;
 
 
 	$sqlTotal = "SELECT count(*) AS total FROM users";
@@ -114,7 +114,7 @@
  					   }?>
 
  					<?php if ($page < $totalPage): ?>
- 						<li><a href="<?php echo $url ?>page=<?php echo $page + 1 ?> ?>">&raquo;</a></li>
+ 						<li><a href="<?php echo $url ?>page=<?php echo $page + 1 ?>">&raquo;</a></li>
  					<?php endif ?>
  					
  				</ul>
